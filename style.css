@@ -1,0 +1,606 @@
+/*
+Theme Name: Marathon Bootstrap
+Theme URI: https://wordpress.org/themes/marathonbootstrap/
+Author: Tim Tan
+Author URI: http://marathontechgroup.com/
+Description: A custom theme originating from a static Bootstrap site from the Marathon Technology Group.
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: marathonbootstrap
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Global Magic */
+
+html, html a, body, button, modal-content {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  padding: 60px;
+}
+
+h1, h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #00264c;
+}
+
+h2, h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #666;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0 0 15px 0;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0 0 15px 0;
+}
+
+h3 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+p, address {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #666;
+
+}
+
+.btn-primary {
+  background-color: #00264c;
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  color: #ffdd00;
+  background-color: #00264c;
+}
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.story {
+  margin: 10px 0 10px 0;
+}
+
+.logo {
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+}
+
+.img-break {
+  width: 100%;
+}
+
+.img-circle {
+  margin: 30px 0 30px 0;
+}
+
+.vertical-bar {
+  margin-top: 90px;
+  color: #ffdd00;
+  border-left:6px solid;
+}
+
+.blog-vertical-bar {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  color: #ffdd00;
+  border-left:6px solid;
+}
+
+@media (max-width: 768px) {
+  .blog-vertical-bar {
+    margin-bottom: 0;
+  }
+}
+
+.text-box {
+  opacity: 0.9;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.sm-text-box {
+  opacity: 0.9;
+  background-color: #fff;
+  padding-top: 18px;
+  padding-bottom: 5px;
+}
+
+.text-box h1 {
+  font-size: 72px;
+}
+
+@media (max-width: 768px) {
+  .text-box h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sm-text-box h2 {
+    font-size: 32px;
+  }
+}
+
+/* Header */
+
+.header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg.png) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 60%;
+  }
+}
+
+.blog-header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: url(../img/blog-bg.png) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .blog-header {
+    height: 30%;
+  }
+}
+
+.join-header {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: url(../img/join-bg.png) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .join-header {
+    height: 30%;
+  }
+}
+
+/* Arrow Down */
+
+.arrow-box {
+  margin-top: 30px;
+  background-color: #00264c;
+  padding: 15px;
+}
+
+.fa-chevron-down {
+  color: #fff;
+}
+
+.fa-chevron-down:hover {
+  color: #ffdd00;
+}
+
+@media (max-width: 768px) {
+  .arrow-box {
+    display: none;
+  }
+}
+
+/* Navbar */
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  color: #ffde05;
+  background-color: #00264c !important;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover
+/* .navbar-default .navbar-nav>li>a:visited */ {
+  color: #fff !important;
+}
+
+.navbar-fixed {
+  top: 0;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+}
+
+.stuck-nav {
+  padding: 0 !important;
+}
+
+.navbar {
+  padding: 10px;
+  background-color: rgb(0,38,76);
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar-brand {
+  margin-top: -6px;
+}
+
+.navbar-toggle {
+  border-radius: 0;
+  border: none;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  border-radius: 0;
+  border: none;
+  background-color: rgb(0,38,76);
+}
+
+.icon-bar {
+  background-color: #fff !important;
+}
+
+.navbar li {
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+.navbar li {
+  margin-right: 15px;
+}
+}
+
+@media (max-width: 992px) {
+.navbar li {
+  font-size: 12.4px;
+}
+}
+
+@media (max-width: 768px) {
+  body { margin-top: 50px; }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .navbar li {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.stuck-nav li a:link,
+.stuck-nav li a:active,
+.stuck-nav li a:visited,
+.stuck-nav li:focus {
+  color: #fff;
+}
+
+.stuck-nav .navbar a:hover {
+  color: #ffde05 !important;
+}
+
+/* What We Do Section */
+
+.custom-counter {
+  margin-left: 0;
+  padding-right: 0;
+  list-style-type: none;
+}
+
+.custom-counter li {
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  counter-increment: step-counter;
+}
+
+.custom-counter li a:link, .custom-counter a:active, .custom-counter a:visited {
+  color: #00264c;
+}
+
+.custom-counter li a:hover, .custom-counter a:focus {
+  color: #666;
+  text-decoration: none;
+}
+
+.custom-counter li::before {
+  content: counter(step-counter);
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  color: #666;
+  margin-right: 5px;
+  padding: 3px 8px;
+}
+
+/* Quick Help Section */
+
+.quick-help {
+  background-color: #ebebeb;
+}
+
+.quick-help .btn {
+  margin-top: 60px;
+}
+
+.dropdown-menu li a:link {
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Our Team Section */
+
+.our-team a:link, .our-team a:active, .our-team a:visited {
+  color: #00264c;
+}
+
+.our-team a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+/* News Section */
+
+.news {
+  background-color: #00264c;
+}
+
+.news h1 {
+  color: #ffdd00;
+}
+
+.news p, .news h3 {
+  color: #fff;
+}
+
+.news a:link, .news a:active, .news a:visited {
+  color: #ffdd00;
+}
+
+.news a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Our Story Section */
+
+.our-story {
+  background-color: #ebebeb;
+}
+
+.our-story a:link, .our-story a:active, .our-story a:visited {
+  color: #00264c;
+}
+
+.our-story a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Contact Us Section */
+
+.contact a:link, .contact a:active, .contact a:visited {
+  color: #00264c;
+}
+
+.contact a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+/* Footer Section */
+
+.footer {
+  background-color: #00264c;
+  padding: 15px;
+}
+
+.footer p {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.footer a:link, .footer a:active, .footer a:visited {
+  color: #ffdd00;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Quick Positioning Wizardry */
+
+.text-push {
+  margin-top: 10px;
+}
+
+.add-body {
+  margin-top: 40px; /* Making room for the navbar */
+}
+
+.spacer {
+  margin-top: 15px;
+}
+
+.double-spacer {
+  margin-top: 30px;
+}
+
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+
+.center-block {
+  display: block;
+  margin-right:auto;
+  margin-left: auto;
+}
+
+/* Flexible iFrame for Google Map */
+
+.flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.flexible-container iframe,
+.flexible-container object,
+.flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Font Awesome Social Media Icons */
+
+.social-media .fa {
+  color: #00264c;
+  margin-left: 30px;
+}
+
+.social-media .fa:hover {
+  color: #ffdd00;
+}
+
+/* These media queries used to left-align the Font Awesome icons when displayed on small devices. */
+
+@media (max-width: 768px) {
+  .social-media .fa {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pull-right {
+    float: left !important;
+  }
+}
+
+/* Blog Page Styles */
+
+.post p,
+.post a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.small-info {
+  font-size: 12px;
+}
+
+.author,
+.post a {
+  color: #00264c;
+}
+
+.post a {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .post h1 {
+    font-size: 24px;
+  }
+  .post h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) { /* Used to remove left column on mobile display. */
+  .author-info {
+    display: none;
+  }
+}
+
+.blog-article a,
+.blog-article a:visited {
+  color: #00264c;
+}
+
+/* When using a CMS, not sure what's the best way to alternate background colors on ever-other post. I'm using the abbreviation "alt" as an id tag to change the color. */
+
+#post-alt {
+  background-color: #ededed;
+}
+
+/* Join Us Style */
+
+.join-intro a {
+  color: #00264c;
+}
+
+.join-intro a:hover {
+  color: #666;
+  text-decoration: none;
+}
+
+.interests {
+  background-color: #ebebeb;
+}
+
+/* Form Styles */
+
+label, span.multiselect-selected-text {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  color: #00264c;
+}
+
+textarea {
+  font-family: 'Open Sans', sans-serif;
+}
+
